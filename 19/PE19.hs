@@ -18,3 +18,5 @@ daysInEachMonth year
 dayOfWeekOnJan1st :: Int -> Int
 dayOfWeekOnJan1st year = (1 + (sum . map (diffMaker)) [1901..year]) `mod` 7
                   where diffMaker = sum . (map (`mod` 7)) . daysInEachMonth
+
+ans = numSundayAtFirstDayOfMonth  1901 2000
